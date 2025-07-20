@@ -6,9 +6,10 @@
 
 <div style="display: flex; justify-content: space-between;">
 
-![arthur_node_jsx_diagram_photoshopped](https://media.git.generalassemb.ly/user/15881/files/c2cf4100-2e61-11eb-913c-d8b656fd9709)
+<img width="871" height="423" alt="mvc" src="https://github.com/user-attachments/assets/0aa4a63f-ecc8-4872-83cb-28da34501cf5" />
 
-![mvc-meme](https://media.git.generalassemb.ly/user/15881/files/24990200-9460-11ea-8f91-a81163b612d5)
+![mvcmeme](https://github.com/user-attachments/assets/62b80a79-f865-4cd2-b8f6-63e919a03ade)
+
 </div>
 </center>
 
@@ -25,27 +26,20 @@
 
 # Build a Vegetable App with JSX-REACT-VIEWS
 
-- make a directory for vegetables
+- fork this repository
+- clone your forked repository
+- make a directory for vegetables in this repo on your computer
 - change into the directory you made
 - make a server.js file in that directory
 - make models views and controllers folders in that directory
 - init the npm project in that directory
-- init a git repository in that directory
-- touch `.gitignore` and add `.env and node_modules` to the file, write each on it's own line
-- git add -A && git commit -m "start here"
-- touch .env
-- add your `MONGO_URI`
-- go to `https://github.com/new` and make a new github repo
-- copy the git link from your new empty git repo
-- git remote add origin <link-here>
-- open code in vs code
+
 
 ## Step 1
 - setup basic express server
 - install appropriate packages `express jsx-view-engine mongoose dotenv`
 - look at code from the video to help you
-- You should not google about jsx you are not far enough in the process to get the right information (trust me they will jump too far ahead and it will confuse you more, rely on the video and in 2 weeks you will be ready for youtube videos about JSX)
-- I promise you google & youtube will not help you right now
+- You should not google about jsx you are not far enough in the process to get the right information 
 - Get used to abstraction, you only need to understand what the function is supposed to accomplish for you, not what it does under the hood. You can drive a car without knowing how the engine works, as a matter of fact you can be a literal professional driver, that gets paid to drive and only know how to use the tool (the car) really well, you may even know how to debug the car (give it oil, give it gas, wash it, add tire pressure) but you will never waste your time learning how to build it, unless that becomes your literal job. KEEP THIS IN MIND...
 
 
