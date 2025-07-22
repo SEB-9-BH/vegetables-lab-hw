@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+body {
+    background-color: #e6ffe6;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 40px;   
+}
+
+/* ---------- HOME---------- */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+    color: green;
+    font-family: "Winky Rough", sans-serif;
+    font-size: 70px;
+}
+
+.view-btn {
+    padding: 10px 70px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* ---------- INDEX ---------- */
+.title {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.veg-list {
+  list-style-type: circle;
+  padding-left: 190px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.veg-list li {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.veg-list a {
+  color: #6a1b9a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.veg-list a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* ---------- SHOW ---------- */
+.show-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #f0fff4;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px #ccc;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.show-container h1 {
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+
+
+/* ---------- FORM STYLES (shared by New and Edit) ---------- */
+.form-container {
+  max-width: 500px;
+  margin: 60px auto;
+  background-color: #f0fff4;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #c8e6c9;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.form-title {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type="text"],
+input[type="checkbox"] {
+  margin-top: 4px;
+  margin-bottom: 12px;
+  padding: 6px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+.form-btn {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #2e7d32;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: #1b5e20;
+}
