@@ -1,5 +1,5 @@
 const React = require('react')
-
+const Layout = require('../layouts/Layout')
 function Index (props){
     const vegetables = props.vegetables
     return (

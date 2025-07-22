@@ -1,5 +1,5 @@
 const React = require('react')
-
+const Layout = require('../layouts/Layout')
 function New (props) {
     return(
         <div>
