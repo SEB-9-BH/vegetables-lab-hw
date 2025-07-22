@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  background-color: #f5fff5;
+  padding: 20px;
+  color: #222;
+}
+
+a {
+  color: #007f00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  margin-top: 10px;
+}
