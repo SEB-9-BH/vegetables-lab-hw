@@ -15,7 +15,9 @@
 
 #### Learning Objectives
 
-- Practicing index and show, new and create routes with express
+- Practicing index, new, delete, update, create, edit and show routes with express
+- Using Express Static Serving of CSS and other assets
+- Incorporating a layout
 
 #### Prerequisites
 
@@ -32,18 +34,16 @@
 - change into the directory you made
 - make a server.js file in that directory
 - make models views and controllers folders in that directory
+- make a views/fruits and views/layouts folder
 - init the npm project in that directory
 
 
 ## Step 1
 - setup basic express server
-- install appropriate packages `express jsx-view-engine mongoose dotenv`
-- look at code from the video to help you
-- You should not google about jsx you are not far enough in the process to get the right information 
-- Get used to abstraction, you only need to understand what the function is supposed to accomplish for you, not what it does under the hood. You can drive a car without knowing how the engine works, as a matter of fact you can be a literal professional driver, that gets paid to drive and only know how to use the tool (the car) really well, you may even know how to debug the car (give it oil, give it gas, wash it, add tire pressure) but you will never waste your time learning how to build it, unless that becomes your literal job. KEEP THIS IN MIND...
+- install appropriate packages `npm i express jsx-view-engine mongoose dotenv method-override`
 
 
-## Steps
+## Following Steps
 
 1. Add A Model File For Vegetables to your vegetables app
 1. Create Index, Show, New and Create routes for Vegetables
@@ -54,21 +54,30 @@
 1. See the vegetables at `http://localhost:3000/vegetables`
 1. Make sure the Show page for vegetable works
 1. make sure you can see vegetables in your MongoDB Atlas DB vegetables database
-
+1. Create Destroy Route
+1. Create Update Route
+1. Create Edit Route
+1. Create Edit `jsx` view    
+1. Add express.static middleware
+1. Add public folder with a css stylesheet
+1. Create Layout jsx view that links to the stylesheet
+1. Connect the Layout to each page
+1. Update the Show Page to Link to the Edit Page and Delete Functionality  
 
 ## The User Stories
 
 - When a user goes to the `/vegatables` route they will see an `index` of veggies on the page
-- When a user clicks on the name of the vegetable, they will be taken to that vegetable's `show` page, and will see the vegatables's name and color and if its READYTOEAT.
+- When a user clicks on the name of the vegetable, they will be taken to that vegetable's `show` page, and will see the vegatables's name and color and if its READYTOEAT and also shows a Delete Button and Edit Button
 - When a user goes to `/vegetables/new` a user sees a form that allows them to create a brand new vegetable, and then redirects the user back to `/vegetables`
+- When a user goes to the `/vegetables/<:id>/edit` route they see a form prefilled with the fruit data that they can change to edit the vegetable
 
 
-## Hints
-```js
-/views/fruits/Index.jsx
-/views/vegetables/Index.jsx
-
-res.render('vegetables/Index', {...})
-
-res.render('fruits/Index', {...})
-```
+| **URL** | **HTTP Verb** |  **Action**| **Used For**| **Mongoose Method** | **View** |
+|------------|-------------|------------|-------------------------------| ---------------------| ------------- |
+| /vegetables/         | GET       | index  | Displaying a list of all vegetables | Vegetable.find | Index.jsx |
+| /vegetables/new         | GET       | new | Display HTML form for creating a new vegetables | none | New.jsx |
+| /vegetables/:id      | DELETE    | destroy | Delete a specific vegetable  | Vegetable.findByIdAndRemove or Vegetable.findByIdAndDelete | none |
+| /vegetables/:id      | PATCH/PUT | update | Update a specific vegetable   | Vegetable.findByIdAndUpdate or Vegetable.findOneAndUpdate | none |
+| /vegetables          | POST      | create | Create a new vegetable | Vegetable.create | none |
+| /vegetables/:id/edit | GET       | edit   | Return an HTML form for editing a vegetable | Vegetable.findOne or Vegetable.findById | Edit.jsx |
+| /vegetables/:id      | GET       | show   | Display a specific vegetable | Vegetable.findOne or Vegetable.findById | Show.jsx |  
