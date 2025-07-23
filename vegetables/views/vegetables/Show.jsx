@@ -6,7 +6,7 @@ function Show({ vegetable }) {
     <Layout title={`View ${vegetable.name}`}>
       <p>
         <strong>Color:</strong> {vegetable.color}<br />
-        <strong>Ready to Eat:</strong> {vegetable.readyToEat ? 'Yes 🥬' : 'No ❌'}
+        <strong>Ready to Eat:</strong> {vegetable.readyToEat ? 'Yes ' : 'No'}
       </p>
       <a href={`/vegetables/${vegetable._id}/edit`}>✏️ Edit</a> <br /><br />
       <form action={`/vegetables/${vegetable._id}?_method=DELETE`} method="POST">

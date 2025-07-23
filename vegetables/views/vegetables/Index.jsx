@@ -9,7 +9,7 @@ function Index({ vegetables }) {
         {vegetables.map((veg) => (
           <li key={veg._id}>
             <a href={`/vegetables/${veg._id}`}>{veg.name}</a> — {veg.color}
-            {veg.readyToEat ? ' ✅' : ' ❌'}
+            {veg.readyToEat ? 'Yes' : 'No'}
           </li>
         ))}
       </ul>
