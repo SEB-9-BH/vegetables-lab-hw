@@ -1,0 +1,25 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+input {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    accent-color: grey;
+}
