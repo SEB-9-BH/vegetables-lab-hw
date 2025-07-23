@@ -5,7 +5,7 @@ function Layout(props){
     <html>
         <head>
             <title>{!props.vegetable.name?'Hello From vegetables': props.vegetable.name}</title>
-            <link rel="stylesheet" href="/style" />
+            <link rel="stylesheet" href="/style.css" />
         </head>
         <body>
             {props.children}
