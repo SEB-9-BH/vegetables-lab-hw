@@ -20,6 +20,7 @@ app.engine("jsx",jsxEngine())
 // middlewaare to give us the body of the request data user filled out
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
+app.use(express.static("public"))
 
 
 app.get("/",(req,res)=>
