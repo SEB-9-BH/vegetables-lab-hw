@@ -1,10 +1,10 @@
 const React = require('react');
-const Layout = require('../layouts/Layout');
+const Layout = require('../layouts/layouts');
 
 function New() {
     return (
         <Layout>
-            <form action="/vegetables" method="POST">
+            <form action="/Vegetables" method="POST">
                 <label>
                     Name: <input type="text" name="name" placeholder="Enter vegetable name" title="Vegetable Name" />
                 </label>

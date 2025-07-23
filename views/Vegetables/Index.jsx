@@ -1,14 +1,14 @@
 const React = require('react');
-const Layout = require('../layouts/Layout');
+const Layout = require('../layouts/layouts');
 
 function Index({ vegetables }) {
     return (
         <Layout>
-            <a href="/vegetables/new">Add New Vegetable</a>
+            <a href="/Vegetables/new">Add New Vegetable</a>
             <ul>
                 {vegetables.map((veg) => (
                     <li key={veg._id}>
-                        <a href={`/vegetables/${veg._id}`}>{veg.name}</a>
+                        <a href={`/Vegetables/${veg._id}`}>{veg.name}</a>
                     </li>
                 ))}
             </ul>

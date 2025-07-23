@@ -8,7 +8,7 @@ function Layout({ children }) {
                 <title>Vegetables App</title>
             </head>
             <body>
-                <h1>Vegetable CRUD App</h1>
+                <h1>Vegetables CRUD App</h1>
                 {children}
             </body>
         </html>

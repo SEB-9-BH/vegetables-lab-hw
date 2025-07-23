@@ -1,10 +1,10 @@
 const React = require('react');
-const Layout = require('../layouts/Layout');
+const Layout = require('../layouts/layouts');
 
 function Edit({ vegetable }) {
     return (
         <Layout>
-            <form action={`/vegetables/${vegetable._id}?_method=PUT`} method="POST">
+            <form action={`/Vegetables/${vegetable._id}?_method=PUT`} method="POST">
                 <label>
                     Name: <input
                         type="text"

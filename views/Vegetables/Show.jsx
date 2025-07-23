@@ -1,5 +1,5 @@
 const React = require('react');
-const Layout = require('../layouts/Layout');
+const Layout = require('../layouts/layouts');
 
 function Show({ vegetable }) {
     return (
@@ -8,11 +8,11 @@ function Show({ vegetable }) {
             <p>Color: {vegetable.color}</p>
             <p>{vegetable.readyToEat ? 'Ready to eat!' : 'Not ready to eat'}</p>
 
-            <a href={`/vegetables/${vegetable._id}/edit`}>Edit</a>
-            <form action={`/vegetables/${vegetable._id}?_method=DELETE`} method="POST" className="delete-form">
+            <a href={`/Vegetables/${vegetable._id}/edit`}>Edit</a>
+            <form action={`/Vegetables/${vegetable._id}?_method=DELETE`} method="POST" className="delete-form">
                 <input type="submit" value="Delete" />
             </form>
-            <a href="/vegetables">Back to Index</a>
+            <a href="/Vegetables">Back to Index</a>
         </Layout>
     );
 }

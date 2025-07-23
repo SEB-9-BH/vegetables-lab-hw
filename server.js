@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URI, {
   useUnifiedTopology: true
 });
 mongoose.connection.once("open", () => {
-  console.log("✅ Connected to MongoDB");
+  console.log("Connected to MongoDB");
 });
 
 // View engine setup
@@ -33,57 +33,55 @@ const vegetableSchema = new mongoose.Schema({
 });
 const Vegetable = mongoose.model("Vegetable", vegetableSchema);
 
-// ========== ROUTES ==========
-
 // Home
 app.get("/", (req, res) => {
   res.send(" Welcome to the Vegetable App!");
 });
 
 // Index - Show all vegetables
-app.get("/vegetables", async (req, res) => {
+app.get("/Vegetables", async (req, res) => {
   const vegetables = await Vegetable.find();
-  res.render("vegetables/Index", { vegetables });
+  res.render("Vegetables/Index", { vegetables });
 });
 
 // New - Show form to create new veg
-app.get("/vegetables/new", (req, res) => {
-  res.render("vegetables/New");
+app.get("/Vegetables/New", (req, res) => {
+  res.render("Vegetables/New");
 });
 
 // Create - Add new vegetable
-app.post("/vegetables", async (req, res) => {
+app.post("/Vegetables", async (req, res) => {
   req.body.readyToEat = req.body.readyToEat === "on";
   await Vegetable.create(req.body);
-  res.redirect("/vegetables");
+  res.redirect("/Vegetables");
 });
 
 // Show - Single vegetable
-app.get("/vegetables/:id", async (req, res) => {
+app.get("/Vegetables/:id", async (req, res) => {
   const vegetable = await Vegetable.findById(req.params.id);
-  res.render("vegetables/Show", { vegetable });
+  res.render("Vegetables/Show", { vegetable });
 });
 
 // Edit - Show edit form
-app.get("/vegetables/:id/edit", async (req, res) => {
+app.get("/Vegetables/:id/edit", async (req, res) => {
   const vegetable = await Vegetable.findById(req.params.id);
-  res.render("vegetables/Edit", { vegetable });
+  res.render("Vegetables/Edit", { vegetable });
 });
 
 // Update - Save edited vegetable
-app.put("/vegetables/:id", async (req, res) => {
+app.put("/Vegetables/:id", async (req, res) => {
   req.body.readyToEat = req.body.readyToEat === "on";
   await Vegetable.findByIdAndUpdate(req.params.id, req.body);
-  res.redirect(`/vegetables/${req.params.id}`);
+  res.redirect(`/Vegetables/${req.params.id}`);
 });
 
 // Delete - Remove vegetable
-app.delete("/vegetables/:id", async (req, res) => {
+app.delete("/Vegetables/:id", async (req, res) => {
   await Vegetable.findByIdAndDelete(req.params.id);
-  res.redirect("/vegetables");
+  res.redirect("/Vegetables");
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
